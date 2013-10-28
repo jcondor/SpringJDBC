@@ -23,6 +23,7 @@ public class PruebaServicioDAO {
     public static void getAll() {
         ApplicationContext context = new ClassPathXmlApplicationContext("jdbc_database.xml");
 
+        //Se puede hacer con la interface servicioDAO
         GenericDAO servicioDAO = (GenericDAO) context.getBean("perrito");
         List<Servicio> servicios = servicioDAO.list();
         for (Servicio servicio : servicios) {
